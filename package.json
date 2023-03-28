@@ -2,13 +2,20 @@
   "name": "dotnet-prelude",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "nx g @nx-dotnet/core:restore"
+  },
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@nrwl/js": "15.8.9",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "15.8.9",
+    "@nx-dotnet/core": "^1.21.1",
     "nx": "15.8.9",
     "prettier": "^2.6.2"
-  }
+  },
+  "volta": {
+    "node": "18.15.0"
+  },
+  "dependencies": {}
 }

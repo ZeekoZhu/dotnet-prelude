@@ -1,0 +1,32 @@
+{
+  "name": "sql-sugar-pgvector.test",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sql-sugar-pgvector.test",
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/sql-sugar-pgvector.test",
+        "{workspaceRoot}/dist/intermediates/libs/sql-sugar-pgvector.test"
+      ],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx-dotnet/core:test",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format"
+    }
+  },
+  "tags": []
+}

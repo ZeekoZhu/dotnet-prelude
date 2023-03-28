@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{063DCFED-F07B-49F4-A72C-C5A825656A7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetPrelude.SqlSugarPgvector", "libs\sql-sugar-pgvector\DotnetPrelude.SqlSugarPgvector.csproj", "{D2D1447D-0A68-40BC-8452-8E78EF677A19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetPrelude.SqlSugarPgvector.Test", "libs\sql-sugar-pgvector.test\DotnetPrelude.SqlSugarPgvector.Test.csproj", "{FE28FB32-EC59-430F-8BAA-07ED7474B561}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2D1447D-0A68-40BC-8452-8E78EF677A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D1447D-0A68-40BC-8452-8E78EF677A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D1447D-0A68-40BC-8452-8E78EF677A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D1447D-0A68-40BC-8452-8E78EF677A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE28FB32-EC59-430F-8BAA-07ED7474B561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE28FB32-EC59-430F-8BAA-07ED7474B561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE28FB32-EC59-430F-8BAA-07ED7474B561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE28FB32-EC59-430F-8BAA-07ED7474B561}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D2D1447D-0A68-40BC-8452-8E78EF677A19} = {063DCFED-F07B-49F4-A72C-C5A825656A7A}
+		{FE28FB32-EC59-430F-8BAA-07ED7474B561} = {063DCFED-F07B-49F4-A72C-C5A825656A7A}
+	EndGlobalSection
+EndGlobal
