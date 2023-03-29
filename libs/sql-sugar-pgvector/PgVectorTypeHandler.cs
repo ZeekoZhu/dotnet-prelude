@@ -50,7 +50,7 @@ internal class PgVectorTypeHandler : NpgsqlSimpleTypeHandler<PgVector>
     // ushort dimension = bytes[0, 1]
     // unknown bytes[2, 3]
     // float[] bytes[4, len]
-    // see pgvector for details
+    // see pgvector for details https://github.com/pgvector/pgvector/blob/9c01524466be10c3e71d9a7842fbf4854e7745c8/src/vector.c#L309
     var dim = buf.ReadUInt16();
     var unused = buf.ReadUInt16();
     if (unused != 0)

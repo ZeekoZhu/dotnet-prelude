@@ -59,10 +59,42 @@ public class Tests
 
   [Test]
   [Order(3)]
-  public void CanQueryWithWhere()
+  public void CanQueryWithDistance()
   {
-    var item = _db.Queryable<VectorItem>().Where(x => x.Vector == new PgVector(new[] { 1.0f, 2.0f, 3.0f })).First();
+    var other = new PgVector(new[] { 1.0f, 2.0f, 3.0f });
+    var item = _db.Queryable<VectorItem>()
+      .Select(x => VectorOperator.L2Distance(x.Vector, other))
+      .First();
+    Assert.That(item, Is.EqualTo(0.0f));
+  }
+
+  [Test]
+  [Order(4)]
+  public void CanFilterWithDistance()
+  {
+    var other = new PgVector(new[] { 1.0f, 2.0f, 3.0f });
+    var l2Distance = _db.Queryable<VectorItem>()
+      .Where(x => VectorOperator.L2Distance(x.Vector, other) < 1.0f)
+      .First();
+    Assert.That(l2Distance, Is.Not.Null);
+    var cosineDistance = _db.Queryable<VectorItem>()
+      .Where(x => VectorOperator.CosineDistance(x.Vector, other) < 1.0f)
+      .First();
+    Assert.That(cosineDistance, Is.Not.Null);
+    var innerProduct = _db.Queryable<VectorItem>()
+      .Where(x => VectorOperator.InnerProduct(x.Vector, other) < 1.0f)
+      .First();
+    Assert.That(innerProduct, Is.Not.Null);
+  }
+
+  [Test]
+  [Order(5)]
+  public void CanQueryAvg()
+  {
+    var item = _db.Queryable<VectorItem>()
+      .Select(x => new VectorItem { Vector = SqlFunc.AggregateAvg(x.Vector) })
+      .First();
     Assert.That(item, Is.Not.Null);
-    Assert.That(item.Vector.Value, Is.EqualTo(new[] { 1.0f, 2.0f, 3.0f }));
+    Assert.That(item.Vector.Value, Is.EquivalentTo(new[] { 1.0f, 2.0f, 3.0f }));
   }
 }
