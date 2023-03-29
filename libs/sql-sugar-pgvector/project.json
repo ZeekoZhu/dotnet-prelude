@@ -20,6 +20,14 @@
         }
       }
     },
+    "pack": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "dotnet pack ./libs/sql-sugar-pgvector/DotnetPrelude.SqlSugarPgvector.csproj -c Release -o ./dist/libs/sql-sugar-pgvector/pack"
+        ]
+      }
+    },
     "lint": {
       "executor": "@nx-dotnet/core:format"
     }

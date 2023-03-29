@@ -1,10 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Version>1.0.0</Version>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Zeeko.SqlSugar.PgVector</RootNamespace>
+    <PackageId>Zeeko.SqlSugar.PgVector</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/ZeekoZhu/dotnet-prelude</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
