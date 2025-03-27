@@ -21,6 +21,14 @@
     "production": ["default"],
     "sharedGlobals": []
   },
+  "generators": {
+    "@nx-dotnet/core:application": {
+      "solutionFile": true
+    },
+    "@nx-dotnet/core:library": {
+      "solutionFile": true
+    }
+  },
   "plugins": [
     {
       "plugin": "@nx-dotnet/core",

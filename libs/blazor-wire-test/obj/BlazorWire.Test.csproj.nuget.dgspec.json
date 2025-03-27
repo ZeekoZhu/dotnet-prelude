@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "/tmp/tmp-1211122-xB4NHf50Laz5/BlazorWire.Test.csproj": {}
+  },
+  "projects": {
+    "/tmp/tmp-1211122-xB4NHf50Laz5/BlazorWire.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/tmp/tmp-1211122-xB4NHf50Laz5/BlazorWire.Test.csproj",
+        "projectName": "BlazorWire.Test",
+        "projectPath": "/tmp/tmp-1211122-xB4NHf50Laz5/BlazorWire.Test.csproj",
+        "packagesPath": "/home/zhutao/.nuget/packages/",
+        "outputPath": "/tmp/tmp-1211122-xB4NHf50Laz5/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": ["/home/zhutao/.nuget/NuGet/NuGet.Config"],
+        "originalTargetFrameworks": ["net9.0"],
+        "sources": {
+          "/home/zhutao/.local/share/dnvm/dn/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": ["NU1605"]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/zhutao/.local/share/dnvm/dn/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "blazor-wire-test",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/blazor-wire-test",
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/blazor-wire-test",
+        "{workspaceRoot}/dist/intermediates/libs/blazor-wire-test",
+        "{projectRoot}/bin",
+        "{projectRoot}/obj"
+      ],
+      "cache": true,
+      "dependsOn": ["^build"],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx-dotnet/core:test",
+      "cache": true,
+      "dependsOn": ["build"],
+      "options": {
+        "noBuild": true
+      }
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format",
+      "cache": true,
+      "inputs": ["{projectRoot}/**/*.{cs,fs,vb}"]
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,34 @@
+{
+  "name": "blazor-wire",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/blazor-wire",
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/blazor-wire",
+        "{workspaceRoot}/dist/intermediates/libs/blazor-wire",
+        "{projectRoot}/bin",
+        "{projectRoot}/obj"
+      ],
+      "cache": true,
+      "dependsOn": ["^build"],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format",
+      "cache": true,
+      "inputs": ["{projectRoot}/**/*.{cs,fs,vb}"]
+    }
+  },
+  "tags": []
+}
