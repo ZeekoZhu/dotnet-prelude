@@ -38,5 +38,5 @@
       "inputs": ["{projectRoot}/**/*.{cs,fs,vb}"]
     }
   },
-  "tags": []
+  "tags": ["blazor-wire"]
 }
