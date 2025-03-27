@@ -1,42 +1,35 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "dotnet-prelude",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
-        "accessToken": "NGZjMDE1YzAtN2QzNC00MTU2LWI0ZGMtMzgzNTg4ZDk5ZWFjfHJlYWQtd3JpdGU="
-      }
-    }
-  },
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "production",
-        "^production"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    },
+    "e2e": {
+      "cache": true
     }
   },
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
-    "production": [
-      "default"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": ["default"],
     "sharedGlobals": []
   },
   "plugins": [
-    "@nx-dotnet/core"
-  ]
+    {
+      "plugin": "@nx-dotnet/core",
+      "options": {
+        "nugetPackages": {}
+      }
+    }
+  ],
+  "nxCloudAccessToken": "NGZjMDE1YzAtN2QzNC00MTU2LWI0ZGMtMzgzNTg4ZDk5ZWFjfHJlYWQtd3JpdGU=",
+  "useInferencePlugins": false,
+  "useLegacyCache": true
 }

@@ -7,15 +7,12 @@
   },
   "private": true,
   "devDependencies": {
-    "@nrwl/js": "15.8.9",
-    "@nrwl/nx-cloud": "latest",
-    "@nrwl/workspace": "15.8.9",
-    "@nx-dotnet/core": "^1.21.1",
-    "nx": "15.8.9",
+    "@nx-dotnet/core": "2.5.0",
+    "nx": "20.6.4",
     "prettier": "^2.6.2"
   },
   "volta": {
     "node": "18.15.0"
   },
-  "dependencies": {}
+  "packageManager": "yarn@4.7.0"
 }
