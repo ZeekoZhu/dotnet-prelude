@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "version": 2,
+  "title": "Pack executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "configuration": {
+      "type": "string",
+      "description": "Defines the build configuration. The default for most projects is Debug, but you can override the build configuration settings in your project",
+      "default": "Debug"
+    },
+    "extraParameters": {
+      "type": "string",
+      "description": "Extra command-line arguments that are passed verbatim to the dotnet command"
+    },
+    "includeSymbols": {
+      "type": "boolean",
+      "description": "Include packages with symbols in addition to regular packages in output directory"
+    },
+    "includeSource": {
+      "type": "boolean",
+      "description": "Include PDBs and source files. Source files go into the 'src' folder in the resulting nuget package"
+    },
+    "noBuild": {
+      "type": "boolean",
+      "description": "Doesn't execute an implicit build during pack. Implies --no-restore"
+    },
+    "noRestore": {
+      "type": "boolean",
+      "description": "Doesn't execute an implicit restore during build"
+    },
+    "nologo": {
+      "type": "boolean",
+      "description": "Doesn't display the startup banner or the copyright message. Available since .NET Core 3.0 SDK"
+    },
+    "output": {
+      "type": "string",
+      "description": "Directory in which to place the built binaries. If not specified, the default path is ./dist/pack/<project>"
+    },
+    "verbosity": {
+      "type": "string",
+      "description": "Sets the verbosity level of the command",
+      "default": "minimal"
+    }
+  },
+  "required": []
+}

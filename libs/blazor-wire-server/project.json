@@ -28,6 +28,28 @@
       "executor": "@nx-dotnet/core:format",
       "cache": true,
       "inputs": ["{projectRoot}/**/*.{cs,fs,vb}"]
+    },
+    "pack": {
+      "executor": "dotnet-plugin:pack",
+      "cache": false,
+      "inputs": ["{projectRoot}/**/*.{cs,fs,vb}"],
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build",
+          "params": "forward"
+        }
+      ],
+      "options": {
+        "configuration": "Debug",
+        "includeSource": true,
+        "noBuild": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
     }
   },
   "tags": ["blazor-wire"]
